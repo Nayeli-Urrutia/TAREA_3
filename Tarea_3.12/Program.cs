@@ -21,17 +21,22 @@ namespace Tarea_3._12
             switch (calificacion)
             {
                 case >= 90 and <= 100:
-                    Console.WriteLine("Sobresaliente");
+                    Console.WriteLine("Excelente");
                     break;
-                case >= 80 and <= 89:
-                    Console.WriteLine("Notable");
+                case >= 79 and <= 89:
+                    Console.WriteLine("Muy bien ");
                     break;
-                case >= 70 and <= 79:
-                    Console.WriteLine("Aprobatoria");
+                case >= 69 and <= 78:
+                    Console.WriteLine("Bien");
                     break;
-                case >= 60 and <= 69:
-                    Console.WriteLine("No Aprobatoria");
+                case >= 60 and <= 68:
+                    Console.WriteLine("Tiene que Mejorar");
                     break;
+
+                case >= 50 and <= 59:
+                    Console.WriteLine("Reprovado");
+                    break;
+
 
                 default:
                     Console.WriteLine("Calificacion No Válida");
