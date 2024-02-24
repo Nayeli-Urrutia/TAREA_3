@@ -13,6 +13,7 @@ namespace Tarea_3._2
             //PROGRAMA 2
 
             int edad;
+            try { 
             Console.WriteLine("Ingrese su Edad");
             edad = int.Parse(Console.ReadLine());
 
@@ -28,6 +29,12 @@ namespace Tarea_3._2
                 Console.WriteLine("No puede Ingresar al Club");
                 Console.ResetColor();
 
+            }
+            
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine(" ERROR ");
             }
             Console.ReadKey();
         }

@@ -11,23 +11,31 @@ namespace Tarea_3._5
         static void Main(string[] args)
         {
             //PROGRAMA 5
-            int numero;          
-
-            Console.WriteLine("Ingrese un Número Entero");
-            numero = int.Parse(Console.ReadLine());
-   
-
-            if (numero % 2==0 )
+            int numero;
+            try
             {
-                Console.ForegroundColor = ConsoleColor.DarkBlue;
-                Console.WriteLine("El Número Ingresado es Par");
-                Console.ResetColor();
+
+                Console.WriteLine("Ingrese un Número Entero");
+                numero = int.Parse(Console.ReadLine());
+
+
+                if (numero % 2 == 0)
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkBlue;
+                    Console.WriteLine("El Número Ingresado es Par");
+                    Console.ResetColor();
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
+                    Console.WriteLine("El Número Ingresado es Impar");
+                    Console.ResetColor();
+                }
+
             }
-            else
+            catch (FormatException)
             {
-                Console.ForegroundColor = ConsoleColor.DarkYellow;
-                Console.WriteLine("El Número Ingresado es Impar");
-                Console.ResetColor();
+                Console.WriteLine(" ERROR");
             }
             Console.ReadKey();
         }

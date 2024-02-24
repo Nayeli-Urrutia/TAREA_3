@@ -11,7 +11,7 @@ namespace Tarea__3._4
         static void Main(string[] args)
         {
             //PROGRAMA 4 
-
+            try { 
             String Nombre, Contraseña;
             bool permitido = false;
             Console.WriteLine(" Ingrese su Nombre de Usuario ");
@@ -37,6 +37,13 @@ namespace Tarea__3._4
                 Console.WriteLine("Usuario o Contraseña Incorrecta");
                 Console.ResetColor();
             }
+           
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine(" ERROR");
+            }
+
             Console.ReadKey();
         }
     }

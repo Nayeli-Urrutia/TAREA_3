@@ -15,6 +15,7 @@ namespace Tarea_3._6
             double prestamo;
             int edad;
             bool aceptar = false;
+            try { 
 
             Console.WriteLine(" Ingrese el Monto del Prestamo que Solicitara");
             prestamo = double.Parse(Console.ReadLine());
@@ -39,7 +40,12 @@ namespace Tarea_3._6
                 Console.WriteLine("Su Prestamo ha sido Rechazado");
                 Console.ResetColor();
             }
-            Console.ReadKey();
+        }
+            catch (FormatException)
+            {
+                Console.WriteLine(" ERROR");
+            }
+    Console.ReadKey();
 
         }
     }

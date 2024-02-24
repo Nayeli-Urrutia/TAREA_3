@@ -11,7 +11,7 @@ namespace Tarea_3._7
         static void Main(string[] args)
         {
             //EJERCICIO 7
-
+            try { 
             string tipoFigura;
             double areat, areac, areag ;
 
@@ -69,8 +69,12 @@ namespace Tarea_3._7
                 Console.WriteLine("Tipo de figura geométrica no válida.");
                 Console.ResetColor();
             }
-
-            Console.ReadKey();
+        }
+            catch (FormatException)
+            {
+                Console.WriteLine(" ERROR");
+            }
+    Console.ReadKey();
         }
     }
 }

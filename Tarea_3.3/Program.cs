@@ -13,6 +13,7 @@ namespace Tarea_3._3
         {
 
             //PROGRAMA 3 
+            try { 
 
             double precio, descuento, preciof ;
             Console.WriteLine("Ingrese el Precio del Producto");
@@ -33,6 +34,12 @@ namespace Tarea_3._3
                 Console.WriteLine("No se cuenta con descuento");
                 Console.WriteLine("El precio final es de: Q." + precio  );
                 Console.ResetColor();
+            }
+
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine(" ERROR");
             }
 
             Console.ReadKey();
